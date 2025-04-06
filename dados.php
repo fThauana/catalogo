@@ -5,16 +5,16 @@ $musicasFixas = [
     [
         'id' => 1,
         'titulo' => 'Bohemian Rhapsody',
-        'categoria' => 'Rock',
-        'imagem' => 'img/bohemian.jpg',
+        'categoria' => 'Hard rock, Rock progressivo, Música infantil, Art rock, Alternativa/indie, Pop progressivo, Pop, Reggae, Rock',
+        'imagem' => 'https://queennet.com.br/wp-content/uploads/2022/12/NATO-7-010.jpg',
         'descricao' => 'Uma das músicas mais famosas do Queen.'
     ],
     [
         'id' => 2,
-        'titulo' => 'Shape of You',
-        'categoria' => 'Pop',
-        'imagem' => 'img/shape.jpg',
-        'descricao' => 'Hit do cantor Ed Sheeran.'
+        'titulo' => 'St. Chroma',
+        'categoria' => 'Hip-Hop/rap',
+        'imagem' => 'https://akamai.sscdn.co/uploadfile/letras/albuns/9/8/4/e/2420011730135018.jpg',
+        'descricao' => 'Música percursora do albúm "Crhomakopia" de Tyler, the Creator.'
     ],
 ];
 
