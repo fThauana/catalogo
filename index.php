@@ -44,7 +44,26 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
+            padding-top: 1cm;
         }
+        .botao-dark {
+            background-color: #1f1f1f;
+            color: #f0f0f0;
+            border: 2px solid #333;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            }
+
+            .botao-dark:hover {
+            background-color: #333;
+            border-color: #555;
+            color: #ffffff;
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+            }
     </style>
 </head>
 <!-- cor do site -->
@@ -55,7 +74,7 @@
         <!-- container com todos os elementos -->
         <div class="container-fluid d-flex align-items-start">
             <!-- nome do site! redirecionando para pagina principal quando clicado -->
-            <a class="navbar-brand d-flex align-items-center" href="index.php" style="color:white;">
+            <a class="navbar-brand d-flex align-items-center " href="index.php" style="color:white;">
                 <i class="bi bi-moon-stars" style="font-size: 30px; color:white;">TopTuns</i>
             </a>
 
@@ -76,14 +95,14 @@
     </nav>
 
 <!-- FILTRAR EM 4 POR LINHA (DANDO ERRO layout) -->
-<!-- Colocar o titulo catalogo de musicas mais para baixo(DANDO ERRO layout) -->
  
 
 
     <div class="container my-5">
-        <h1 class="text-center mb-5" style="color:white;">Catálogo de Músicas</h1>
+        <h1 class="text-center mb-5" style="color:white; padding-top:1cm; ">Catálogo de Músicas</h1>
 
-        <a href="filtrar.php">Filtrar por categoria</a> <!-- fazer um botao como select so para filtrar na pagina do index mesmo-->
+        <a class="botao-dark" href="filtrar.php">Filtrar por categoria</a> <!-- fazer um botao como select so para filtrar na pagina do index mesmo-->
+        <a class="botao-dark" href="logout.php">Sair da sessão</a>
 
         <div class="row row-cols-1 row-cols-md-4 g-4">
             <?php include 'dados.php'; ?>
@@ -95,7 +114,7 @@
                         <div class="card-body">
                             <h3><?= $musica['titulo'] ?></h3>
                             <p>Categoria: <?= $musica['categoria'] ?></p>
-                            <a href="detalhes.php?id=<?= $musica['id'] ?>">Ver mais</a>
+                            <a class="botao-dark" href="detalhes.php?id=<?= $musica['id'] ?>">Ver mais</a>
                         </div>
                     </div>
                 </div>
