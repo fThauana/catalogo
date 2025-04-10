@@ -1,7 +1,7 @@
 <?php
 session_start();
-$usuarioCorreto = 'admin';
-$senhacorreta = '12345';
+$usuarioCorreto = 'rush';
+$senhacorreta = '12345678';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $usuario = $_POST['usuario'];
