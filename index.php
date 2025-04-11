@@ -96,13 +96,11 @@
 
 <!-- FILTRAR EM 4 POR LINHA (DANDO ERRO layout) -->
  
-
-
     <div class="container my-5">
         <h1 class="text-center mb-5" style="color:white; padding-top:1cm; ">Catálogo de Músicas</h1>
 
-        <a class="botao-dark" href="filtrar.php">Filtrar por categoria</a> <!-- fazer um botao como select so para filtrar na pagina do index mesmo-->
-        <a class="botao-dark" href="logout.php">Sair da sessão</a>
+        <a class="botao-dark" style="background-color:rebeccapurple" href="filtrar.php">Filtrar por categoria</a> <!-- fazer um botao como select so para filtrar na pagina do index mesmo-->
+        <a class="botao-dark" style="background-color:dimgray" href="logout.php">Sair da sessão</a>
 
         <div class="row row-cols-1 row-cols-md-4 g-4">
             <?php include 'dados.php'; ?>
@@ -114,7 +112,7 @@
                         <div class="card-body">
                             <h3><?= $musica['titulo'] ?></h3>
                             <p>Categoria: <?= $musica['categoria'] ?></p>
-                            <a class="botao-dark" href="detalhes.php?id=<?= $musica['id'] ?>">Ver mais</a>
+                            <a class="botao-dark" style="background-color:dimgray"   href="detalhes.php?id=<?= $musica['id'] ?>">Ver mais</a>
                         </div>
                     </div>
                 </div>
