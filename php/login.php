@@ -1,12 +1,13 @@
 <?php
-// Habilitar a exibição de erros (para depuração)
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 
-// Iniciar a sessão
 session_start();
 
-// Incluir o navbar
+// Se já estiver logado como administrador, redireciona para a página protegida
+if (isset($_SESSION['logado']) && $_SESSION['logado'] === true) {
+    header('Location: protegido.php');
+    exit;
+}
+
 include 'navbar.php';
 
 $usuarioCorreto = 'rush';
@@ -21,9 +22,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($usuario === $usuarioCorreto && $senha === $senhacorreta) {
         $_SESSION['logado'] = true;
         header('Location: protegido.php');
-        exit; // Certifique-se de que o script pare após o redirecionamento
+        exit; 
     } else {
-        echo "Usuário ou senha inválidos."; // Mensagem de erro
+        echo "Usuário ou senha inválidos."; 
     }
 }
 ?>
